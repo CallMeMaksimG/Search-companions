@@ -1,0 +1,370 @@
+.card {
+  background: var(--white-bg);
+  border-radius: 20px;
+  display: flex;
+  height: 285px;
+
+  @media screen and (max-width: 950px) {
+    padding: 35px 25px 25px 35px;
+    height: 360px;
+    position: relative;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 750px) {
+    height: auto;
+    padding: 15px 20px;
+    display: block;
+    padding: 0;
+  }
+}
+
+.card__photo {
+  max-width: 285px;
+  height: 285px;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+
+    @media screen and (max-width: 950px) {
+      border-radius: 20px;
+    }
+
+    @media screen and (max-width: 750px) {
+      border-radius: 50%;
+    }
+  }
+
+  @media screen and (max-width: 950px) {
+    height: 190px;
+  }
+
+  @media screen and (max-width: 750px) {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 18px;
+    top: 15px;
+  }
+}
+
+.card__content {
+  padding: 48px 36px 47px 43px;
+  display: grid;
+  width: 78%;
+  grid-template-columns: 276px auto;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0 78px;
+  grid-template-areas:
+    'name  countries '
+    'name  countries '
+    'buttons transport ';
+
+  @media screen and (max-width: 950px) {
+    padding: 0;
+    padding-left: 33px;
+
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+
+    grid-template-columns: 1fr 60px;
+    grid-template-rows: 145px 50px;
+
+    grid-template-areas:
+      'name transport'
+      'buttons transport';
+    grid-template-rows: 132px auto auto auto;
+  }
+
+  @media screen and (max-width: 750px) {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.card__user-info {
+  grid-area: name;
+}
+
+.card__status {
+  width: 8px;
+  height: 8px;
+  background-color: #f97676;
+  border-radius: 50%;
+
+  &--online {
+    background: #81e31e;
+  }
+
+  @media screen and (max-width: 750px) {
+    width: 6px;
+    height: 6px;
+    margin-top: 23px;
+  }
+}
+
+.card__username {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 20px;
+  h3 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    color: var(--text-dark-blue);
+
+    @media screen and (max-width: 750px) {
+      font-size: 20px;
+      line-height: 20px;
+      width: 78px;
+      margin-left: 106px;
+      margin-top: 15px;
+    }
+
+    @media screen and (max-width: 750px) {
+      margin-bottom: 44px;
+    }
+  }
+
+  @media screen and (max-width: 950px) {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  @media screen and (max-width: 750px) {
+    align-items: flex-start;
+  }
+}
+
+.card__hobby {
+  max-width: 225px;
+  margin-left: 25px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  margin-bottom: 40px;
+
+  ul {
+    display: flex;
+  }
+
+  @media screen and (max-width: 950px) {
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 750px) {
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--text-muted);
+    position: absolute;
+    left: 26px;
+    top: 98px;
+  }
+}
+
+.card__buttons {
+  grid-area: buttons;
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+
+  @media screen and (max-width: 950px) {
+    margin-left: 0;
+    align-items: flex-start;
+  }
+  @media screen and (max-width: 750px) {
+    order: 5;
+    padding: 0 20px;
+  }
+}
+
+.card__countries {
+  grid-area: countries;
+
+  @media screen and (max-width: 950px) {
+    grid-area: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 25px;
+    padding-left: 37px;
+    border-top: 1px solid #edeff6;
+    padding-top: 26px;
+    width: 100%;
+
+    &:before {
+      content: 'хочет посетить:';
+      position: absolute;
+      background-color: var(--white-bg);
+      text-transform: uppercase;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 16px;
+      color: var(--text-muted);
+      top: -5px;
+      padding: 0 12px;
+      left: 80px;
+
+      @media screen and (max-width: 750px) {
+        text-transform: lowercase;
+        top: -8px;
+        left: 15px;
+      }
+    }
+    @media screen and (max-width: 750px) {
+      padding: 25px 25px 22px;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    position: relative;
+    grid-area: countries;
+    margin-top: 40px;
+  }
+}
+
+.card__transport {
+  grid-area: transport;
+  display: flex;
+  align-items: center;
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-right: 52px;
+    width: 120px;
+
+    @media screen and (max-width: 950px) {
+      flex-direction: column;
+      margin-right: 0;
+      gap: 11px;
+      @media screen and (max-width: 750px) {
+        flex-direction: row;
+        width: 100%;
+        gap: 1px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  @media screen and (max-width: 750px) {
+    flex-direction: row;
+    padding: 16px 20px 14px;
+    align-items: normal;
+    border-top: 1px solid #edeff6;
+    position: relative;
+
+    &::before {
+      content: 'транспорт:';
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 16px;
+      color: var(--text-muted);
+      background-color: var(--white-bg);
+      position: absolute;
+      padding: 0 10px;
+      top: -10px;
+      left: 15px;
+    }
+
+    &::after {
+      content: 'левел:';
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 16px;
+      color: var(--text-muted);
+      background-color: var(--white-bg);
+      position: absolute;
+      padding: 0 10px;
+      top: -10px;
+      right: 12px;
+    }
+  }
+}
+
+.card__level {
+  grid-area: level;
+  position: relative;
+  min-height: 60px;
+  min-width: 60px;
+  border-radius: 50%;
+  background: var(--white-bg)
+    linear-gradient(to right, transparent 50%, var(--ui-orange) 0);
+  margin: 0 auto;
+
+  @media screen and (max-width: 750px) {
+    margin: 0;
+    margin-left: auto;
+    min-height: 45px;
+    min-width: 45px;
+  }
+}
+
+.card__level::before {
+  content: '';
+  display: block;
+  height: 100%;
+  margin-left: 50%;
+  transform-origin: left;
+  border-radius: 0 100% 100% 0/50%;
+}
+
+.card__level::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: var(--white-bg);
+  border-radius: 50%;
+}
+
+.card__level::before {
+  background: var(--ui-orange);
+  transform: rotate(calc((var(--i) - 50) * 0.01turn));
+}
+
+.card__level--less::before {
+  background: var(--white-bg);
+  transform: rotate(calc((var(--i) - 0) * 0.01turn));
+}
+
+.card__level-count {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-dark-blue);
+  position: absolute;
+  z-index: 2;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+
+  @media screen and (max-width: 750px) {
+    top: 55%;
+    transform: translate(-50%, -55%);
+  }
+}
+
+.card__level-text {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.4;
+  border-top: 1px solid rgb(0, 0, 0, 0.4);
+  padding-top: 2px;
+  z-index: 2;
+  position: absolute;
+  top: 73%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
+}

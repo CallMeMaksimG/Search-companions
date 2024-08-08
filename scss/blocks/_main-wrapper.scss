@@ -1,0 +1,12 @@
+.main__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  gap: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+}

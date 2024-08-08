@@ -1,0 +1,29 @@
+.countries__list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  @media screen and (max-width: 950px) {
+    flex-direction: row;
+  }
+  @media screen and (max-width: 750px) {
+    flex-direction: column;
+  }
+}
+
+.countries__list-item {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--text-dark-blue);
+
+  @media screen and (max-width: 750px) {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+}

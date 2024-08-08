@@ -1,0 +1,98 @@
+.buttons__call {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark-blue);
+  background-color: var(--ui-yellow);
+  text-transform: uppercase;
+  border-radius: 25px;
+  width: 150px;
+  height: 50px;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: lighten(#ffd74b, 10);
+  }
+
+  @media screen and (max-width: 750px) {
+    width: 100%;
+    height: 40px;
+    font-size: 17px;
+    line-height: 17px;
+    margin-bottom: 23px;
+  }
+}
+
+.buttons__like {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  svg {
+    @media screen and (max-width: 750px) {
+      width: 12px;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    position: absolute;
+    top: 60px;
+    left: 68px;
+  }
+
+  .buttons__like-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--ui-light-grey);
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: darken(#e2e5f2, 10);
+    }
+
+    &--active {
+      background-color: var(--ui-light-pink);
+
+      &:hover {
+        background-color: darken(#f9eaea, 10);
+      }
+    }
+    @media screen and (max-width: 750px) {
+      position: absolute;
+      width: 31px;
+      height: 31px;
+    }
+  }
+
+  .heart-icon {
+    fill: none;
+    stroke: #192144;
+    opacity: 0.5;
+
+    &--active {
+      fill: #f02323;
+      stroke: #f02323;
+      opacity: 1;
+    }
+  }
+}
+
+.buttons__like-counter {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark-blue);
+  white-space: nowrap;
+
+  @media screen and (max-width: 750px) {
+    margin-left: 37px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

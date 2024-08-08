@@ -1,0 +1,22 @@
+.transport__list-item--disabled {
+  img {
+    opacity: 0.15;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .transport__list-item,
+  .transport__list-item--disabled {
+    width: 32px;
+    height: 32px;
+    background-color: var(--ui-light-grey);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 16px;
+    }
+  }
+}

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search companions</title>
+    <link rel="stylesheet" href="./libs/nouislider.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <section class="main__wrapper">
+          <aside class="filter">
+            <h2 class="filter__title">Подберите идеального попутчика</h2>
+            <form class="filter__items">
+              <div class="filter__item">
+                <div class="filter__label">
+                  хобби
+                  <img
+                    class="filter__label-img"
+                    src="./img/icons/arrow.svg"
+                    alt="стрелка"
+                  />
+                </div>
+                <div class="filter__content">
+                  <div class="filter__hobby">
+                    <label
+                      ><input
+                        type="checkbox"
+                        class="filter__real-checkbox"
+                      /><span class="filter__custom-checkbox"></span
+                      >Спортзал</label
+                    >
+                    <label
+                      ><input
+                        type="checkbox"
+                        class="filter__real-checkbox"
+                      /><span class="filter__custom-checkbox"></span>Кальян
+                    </label>
+                    <label
+                      ><input
+                        type="checkbox"
+                        class="filter__real-checkbox"
+                      /><span class="filter__custom-checkbox"></span
+                      >Диван</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="filter__item">
+                <div class="filter__label">
+                  музыка
+                  <img
+                    class="filter__label-img"
+                    src="./img/icons/arrow.svg"
+                    alt="стрелка"
+                  />
+                </div>
+                <div class="filter__content">
+                  <div class="filter__music">
+                    <label
+                      ><input
+                        type="checkbox"
+                        class="filter__real-checkbox"
+                      /><span class="filter__custom-checkbox"></span>Тяжелый
+                      рок</label
+                    >
+                    <label
+                      ><input
+                        type="checkbox"
+                        class="filter__real-checkbox"
+                      /><span class="filter__custom-checkbox"></span>Русский
+                      рэп</label
+                    >
+                    <label
+                      ><input
+                        type="checkbox"
+                        class="filter__real-checkbox"
+                      /><span class="filter__custom-checkbox"></span
+                      >Евроденс</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="filter__item">
+                <div class="filter__label">
+                  еда
+                  <img
+                    class="filter__label-img"
+                    src="./img/icons/arrow.svg"
+                    alt="стрелка"
+                  />
+                </div>
+                <div class="filter__content">
+                  <div class="filter__eats">
+                    <label
+                      ><input
+                        type="checkbox"
+                        class="filter__real-checkbox"
+                      /><span class="filter__custom-checkbox"></span
+                      >Мясоед</label
+                    >
+                    <label
+                      ><input
+                        type="checkbox"
+                        class="filter__real-checkbox"
+                      /><span class="filter__custom-checkbox"></span>Сидит на
+                      ПП</label
+                    >
+                    <label
+                      ><input
+                        type="checkbox"
+                        class="filter__real-checkbox"
+                      /><span class="filter__custom-checkbox"></span
+                      >Веган-сыроед</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="filter__item">
+                <div class="filter__label">
+                  транспорт
+                  <img
+                    class="filter__label-img"
+                    src="./img/icons/arrow.svg"
+                    alt="стрелка"
+                  />
+                </div>
+                <div class="filter__content">
+                  <div class="filter__transport">
+                    <input type="checkbox" id="plane" />
+                    <label for="plane"><span></span></label>
+                    <input type="checkbox" id="bus" />
+                    <label for="bus"><span></span></label>
+                    <input type="checkbox" id="bicycle" />
+                    <label for="bicycle"><span></span></label>
+                    <input type="checkbox" id="run" />
+                    <label for="run"><span></span></label>
+                  </div>
+                </div>
+              </div>
+              <div class="filter__item">
+                <div class="filter__label">
+                  ЛЕВЕЛ
+                  <img
+                    class="filter__label-img"
+                    src="./img/icons/arrow.svg"
+                    alt="стрелка"
+                  />
+                </div>
+                <div class="filter__content">
+                  <div class="filter__slider">
+                    <div class="filter__slider-input">
+                      <input
+                        id="min"
+                        class="filter__input-min"
+                        type="number"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                      <input
+                        id="max"
+                        class="filter__input-max"
+                        type="number"
+                        min="0"
+                        max="100"
+                        value="100"
+                      />
+                    </div>
+                    <div class="slider"></div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <button type="submit" class="filter__btn">показать</button>
+          </aside>
+          <div class="cards-wrapper">
+            <div class="cards">
+              <article class="card">
+                <div class="card__photo">
+                  <img src="./img/cards/firsova-desktop.png" alt="avatar" />
+                </div>
+                <div class="card__content">
+                  <div class="card__user-info">
+                    <div class="card__username">
+                      <div class="card__status"></div>
+                      <h3>Таня Фирсова</h3>
+                    </div>
+                    <div class="card__hobby">
+                      <p>#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+                    </div>
+                  </div>
+                  <div class="card__buttons">
+                    <button class="buttons__call">Позвать!</button>
+                    <div class="buttons__like">
+                      <button id="like" class="buttons__like-btn">
+                        <svg
+                          width="21"
+                          height="18"
+                          viewBox="0 0 21 18"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            class="heart-icon"
+                            d="M5.61389 0.25C8.3743 0.25 10.6101 2.44375 10.6101 5.15C10.6101 2.44375 12.8459 0.25 15.6063 0.25C18.3667 0.25 20.6025 2.44375 20.6025 5.15C20.6025 9.22875 16.5631 10.6675 11.0997 17.16C11.0396 17.2313 10.9646 17.2886 10.88 17.3279C10.7955 17.3672 10.7034 17.3876 10.6101 17.3876C10.5169 17.3876 10.4247 17.3672 10.3402 17.3279C10.2556 17.2886 10.1806 17.2313 10.1205 17.16C4.65711 10.6675 0.617676 9.22875 0.617676 5.15C0.617676 2.44375 2.85348 0.25 5.61389 0.25Z"
+                          />
+                        </svg>
+                      </button>
+                      <div class="buttons__like-counter">1,5 М</div>
+                    </div>
+                  </div>
+                  <div class="card__countries">
+                    <ul class="countries__list">
+                      <li class="countries__list-item">
+                        <img
+                          src="./img/countries/SriLanka.svg"
+                          alt="шри-ланка"
+                        />шри-ланка
+                      </li>
+                      <li class="countries__list-item">
+                        <img
+                          src="./img/countries/Thailand.svg"
+                          alt="Таиланд"
+                        />Таиланд
+                      </li>
+                      <li class="countries__list-item">
+                        <img
+                          src="./img/countries/Seychelles.svg"
+                          alt="сейшелы"
+                        />сейшелы
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card__transport">
+                    <ul class="transport__list">
+                      <li class="transport__list-item">
+                        <img src="./img/icons/plane.svg" alt="plane" />
+                      </li>
+                      <li class="transport__list-item--disabled">
+                        <img src="./img/icons/bus.svg" alt="bus" />
+                      </li>
+                      <li class="transport__list-item--disabled">
+                        <img src="./img/icons/bicycle.svg" alt="bicycle" />
+                      </li>
+                      <li class="transport__list-item--disabled">
+                        <img src="./img/icons/run.svg" alt="run" />
+                      </li>
+                    </ul>
+                    <div class="card__level" style="--i: 99">
+                      <span class="card__level-count">99</span
+                      ><span class="card__level-text">level</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <div class="card__photo">
+                  <img src="./img/cards/demin.png" alt="avatar" />
+                </div>
+                <div class="card__content">
+                  <div class="card__user-info">
+                    <div class="card__username">
+                      <div class="card__status"></div>
+                      <h3>Петя Демин</h3>
+                    </div>
+                    <div class="card__hobby">
+                      <p>#бургер #бар #футбол #концерт #крафт</p>
+                    </div>
+                  </div>
+                  <div class="card__buttons">
+                    <button class="buttons__call">Позвать!</button>
+                    <div class="buttons__like">
+                      <button class="buttons__like-btn">
+                        <svg
+                          width="21"
+                          height="18"
+                          viewBox="0 0 21 18"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            class="heart-icon"
+                            d="M5.61389 0.25C8.3743 0.25 10.6101 2.44375 10.6101 5.15C10.6101 2.44375 12.8459 0.25 15.6063 0.25C18.3667 0.25 20.6025 2.44375 20.6025 5.15C20.6025 9.22875 16.5631 10.6675 11.0997 17.16C11.0396 17.2313 10.9646 17.2886 10.88 17.3279C10.7955 17.3672 10.7034 17.3876 10.6101 17.3876C10.5169 17.3876 10.4247 17.3672 10.3402 17.3279C10.2556 17.2886 10.1806 17.2313 10.1205 17.16C4.65711 10.6675 0.617676 9.22875 0.617676 5.15C0.617676 2.44375 2.85348 0.25 5.61389 0.25Z"
+                          />
+                        </svg>
+                      </button>
+                      <div class="buttons__like-counter">1500</div>
+                    </div>
+                  </div>
+                  <div class="card__countries">
+                    <ul class="countries__list">
+                      <li class="countries__list-item">
+                        <img
+                          src="./img/countries/Belgium.svg"
+                          alt="бельгия"
+                        />бельгия
+                      </li>
+                      <li class="countries__list-item">
+                        <img src="./img/countries/Czech.svg" alt="чехия" />чехия
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card__transport">
+                    <ul class="transport__list">
+                      <li class="transport__list-item">
+                        <img src="./img/icons/plane.svg" alt="plane" />
+                      </li>
+                      <li class="transport__list-item">
+                        <img src="./img/icons/bus.svg" alt="bus" />
+                      </li>
+                      <li class="transport__list-item--disabled">
+                        <img src="./img/icons/bicycle.svg" alt="bicycle" />
+                      </li>
+                      <li class="transport__list-item">
+                        <img src="./img/icons/run.svg" alt="run" />
+                      </li>
+                    </ul>
+                    <div class="card__level" style="--i: 80">
+                      <span class="card__level-count">80</span
+                      ><span class="card__level-text">level</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <div class="card__photo">
+                  <img src="./img/cards/smolov.png" alt="avatar" />
+                </div>
+                <div class="card__content">
+                  <div class="card__user-info">
+                    <div class="card__username">
+                      <div class="card__status"></div>
+                      <h3>Марк Смолов</h3>
+                    </div>
+                    <div class="card__hobby">
+                      <p>#рэп #тату #хайпбист #кроссовки #суприм</p>
+                    </div>
+                  </div>
+                  <div class="card__buttons">
+                    <button class="buttons__call">Позвать!</button>
+                    <div class="buttons__like">
+                      <button class="buttons__like-btn">
+                        <svg
+                          width="21"
+                          height="18"
+                          viewBox="0 0 21 18"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            class="heart-icon"
+                            d="M5.61389 0.25C8.3743 0.25 10.6101 2.44375 10.6101 5.15C10.6101 2.44375 12.8459 0.25 15.6063 0.25C18.3667 0.25 20.6025 2.44375 20.6025 5.15C20.6025 9.22875 16.5631 10.6675 11.0997 17.16C11.0396 17.2313 10.9646 17.2886 10.88 17.3279C10.7955 17.3672 10.7034 17.3876 10.6101 17.3876C10.5169 17.3876 10.4247 17.3672 10.3402 17.3279C10.2556 17.2886 10.1806 17.2313 10.1205 17.16C4.65711 10.6675 0.617676 9.22875 0.617676 5.15C0.617676 2.44375 2.85348 0.25 5.61389 0.25Z"
+                          />
+                        </svg>
+                      </button>
+                      <div class="buttons__like-counter">170</div>
+                    </div>
+                  </div>
+                  <div class="card__countries">
+                    <ul class="countries__list">
+                      <li class="countries__list-item">
+                        <img
+                          src="./img/countries/United-States-of-America.svg"
+                          alt="сша"
+                        />сша
+                      </li>
+                      <li class="countries__list-item">
+                        <img
+                          src="./img/countries/Australia.svg"
+                          alt="австралия"
+                        />австралия
+                      </li>
+                      <li class="countries__list-item">
+                        <img
+                          src="./img/countries/Dominica.svg"
+                          alt="доминика"
+                        />доминика
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card__transport">
+                    <ul class="transport__list">
+                      <li class="transport__list-item">
+                        <img src="./img/icons/plane.svg" alt="plane" />
+                      </li>
+                      <li class="transport__list-item--disabled">
+                        <img src="./img/icons/bus.svg" alt="bus" />
+                      </li>
+                      <li class="transport__list-item">
+                        <img src="./img/icons/bicycle.svg" alt="bicycle" />
+                      </li>
+                      <li class="transport__list-item--disabled">
+                        <img src="./img/icons/run.svg" alt="run" />
+                      </li>
+                    </ul>
+                    <div class="card__level card__level--less" style="--i: 25">
+                      <span class="card__level-count">25</span
+                      ><span class="card__level-text">level</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <div class="card__photo">
+                  <img src="./img/cards/rogovaya.png" alt="avatar" />
+                </div>
+                <div class="card__content">
+                  <div class="card__user-info">
+                    <div class="card__username">
+                      <div class="card__status card__status--online"></div>
+                      <h3>Лариса Роговая</h3>
+                    </div>
+                    <div class="card__hobby">
+                      <p>#образование #карьера #учеба #линкедин</p>
+                    </div>
+                  </div>
+                  <div class="card__buttons">
+                    <button class="buttons__call">Позвать!</button>
+                    <div class="buttons__like">
+                      <button class="buttons__like-btn">
+                        <svg
+                          width="21"
+                          height="18"
+                          viewBox="0 0 21 18"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            class="heart-icon"
+                            d="M5.61389 0.25C8.3743 0.25 10.6101 2.44375 10.6101 5.15C10.6101 2.44375 12.8459 0.25 15.6063 0.25C18.3667 0.25 20.6025 2.44375 20.6025 5.15C20.6025 9.22875 16.5631 10.6675 11.0997 17.16C11.0396 17.2313 10.9646 17.2886 10.88 17.3279C10.7955 17.3672 10.7034 17.3876 10.6101 17.3876C10.5169 17.3876 10.4247 17.3672 10.3402 17.3279C10.2556 17.2886 10.1806 17.2313 10.1205 17.16C4.65711 10.6675 0.617676 9.22875 0.617676 5.15C0.617676 2.44375 2.85348 0.25 5.61389 0.25Z"
+                          />
+                        </svg>
+                      </button>
+                      <div class="buttons__like-counter">23</div>
+                    </div>
+                  </div>
+                  <div class="card__countries">
+                    <ul class="countries__list">
+                      <li class="countries__list-item">
+                        <img
+                          src="./img/countries/United-Kingdom.svg"
+                          alt="Великобритания"
+                        />Великобритания
+                      </li>
+                      <li class="countries__list-item">
+                        <img
+                          src="./img/countries/Germany.svg"
+                          alt="Германия"
+                        />Германия
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card__transport">
+                    <ul class="transport__list">
+                      <li class="transport__list-item">
+                        <img src="./img/icons/plane.svg" alt="plane" />
+                      </li>
+                      <li class="transport__list-item">
+                        <img src="./img/icons/bus.svg" alt="bus" />
+                      </li>
+                      <li class="transport__list-item--disabled">
+                        <img src="./img/icons/bicycle.svg" alt="bicycle" />
+                      </li>
+                      <li class="transport__list-item--disabled">
+                        <img src="./img/icons/run.svg" alt="run" />
+                      </li>
+                    </ul>
+                    <div class="card__level" style="--i: 50">
+                      <span class="card__level-count">50</span
+                      ><span class="card__level-text">level</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <button class="cards__btn">
+                <img src="./img/icons/plus.svg" alt="плюс" />показать еще
+              </button>
+            </div>
+            <div class="pagination">
+              <ul class="pagination__list">
+                <li class="pagination__list-item">
+                  <a
+                    class="pagination__list-item-link pagination__list-item-link--active"
+                    href="#!"
+                    >1</a
+                  >
+                </li>
+                <li class="pagination__list-item">
+                  <a class="pagination__list-item-link" href="#!">2</a>
+                </li>
+                <li class="pagination__list-item">
+                  <a class="pagination__list-item-link" href="#!">3</a>
+                </li>
+                <li class="pagination__list-item">
+                  <a class="pagination__list-item-link" href="#!">4</a>
+                </li>
+              </ul>
+              <div class="pagination__control-btn">
+                <button><img src="./img/icons/prev.svg" alt="prev" /></button>
+                <button><img src="./img/icons/next.svg" alt="next" /></button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="./libs/nouislider.min.js"></script>
+    <script src="./js/range-slider.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

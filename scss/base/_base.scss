@@ -1,0 +1,11 @@
+html,
+body {
+  font-family: var(--font-main);
+  background-color: var(--page-bg);
+}
+.container {
+  max-width: 1360px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+

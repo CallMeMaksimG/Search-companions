@@ -1,0 +1,40 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: center;
+
+  @media screen and (max-width: 750px) {
+    gap: 10px;
+  }
+}
+
+.cards__btn {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark-blue);
+  text-transform: uppercase;
+  width: 185px;
+  margin: 0 auto;
+  white-space: nowrap;
+  margin-top: 30px;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin-top: 26px;
+  }
+
+  @media screen and (max-width: 750px) {
+    font-size: 17px;
+    line-height: 30px;
+    height: 30px;
+    margin-top: 11px;
+  }
+}
